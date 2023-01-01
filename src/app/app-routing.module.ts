@@ -1,7 +1,66 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainPageComponent } from './main-page/main-page.component';
+import { AdminComponent } from './usuario/components/admin/admin.component';
+import { AlumnoComponent } from './usuario/components/alumno/alumno.component';
+import { DocenteComponent } from './usuario/components/docente/docente.component';
+import { GrupoComponent } from './usuario/components/grupo/grupo.component';
+import { WelcomeComponent } from './usuario/components/welcome/welcome.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { EditarComponent } from './usuario/components/admin/editar/editar.component';
+import { MostrarComponent } from './usuario/components/admin/mostrar/mostrar.component';
+import { LoginComponent } from './usuario/components/login/login.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'',
+    component:MainPageComponent
+  },
+  {
+    path:'login',
+    component:LoginComponent
+  },
+  {
+    path:'user',
+    component:UsuarioComponent,
+    children:[
+      {
+        path:'welcome',
+        component:WelcomeComponent
+      },
+      {
+        path:'admin',
+        component:AdminComponent,
+        children:[
+          {
+            path:'editar',
+            component:EditarComponent
+          },
+          {
+            path:'editar/:id',
+            component:EditarComponent
+          },
+          {
+            path:'mostrar',
+            component:MostrarComponent
+          }
+        ]
+      },
+      {
+        path:'docente',
+        component:DocenteComponent
+      },
+      {
+        path:'alumno',
+        component:AlumnoComponent
+      },
+      {
+        path:'grupo',
+        component:GrupoComponent
+      }
+    ]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

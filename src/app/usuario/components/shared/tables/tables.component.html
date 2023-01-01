@@ -1,0 +1,12 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th *ngFor="let item of headerItems;" >{{item}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let posBody of body;">
+      <td *ngFor="let item of posBody;">{{item}}</td>
+    </tr>
+  </tbody>
+</table>

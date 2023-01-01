@@ -1,0 +1,40 @@
+<!-- Nav tabs -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+    </a>
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link active"
+          [routerLink]="['/user/welcome']"
+          routerLinkActive="router-link-active"
+        >Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+        [routerLink]="['/user/admin']"
+        routerLinkActive="router-link-active"
+        >Admnistrador</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+        [routerLink]="['/user/docente']"
+        routerLinkActive="router-link-active"
+        >Docentes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+        [routerLink]="['/user/alumno']"
+        routerLinkActive="router-link-active"
+        >Alumnos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+        [routerLink]="['/user/grupo']"
+        routerLinkActive="router-link-active"
+        >Grupos</a>
+      </li>
+    </ul>
+  </div>
+</nav>
