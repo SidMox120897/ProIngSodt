@@ -17,13 +17,8 @@ export class ApiService {
     return this._http.get<any>(`${this.baseUrl}${url}`);
   }
 
-  postTypeRequest(url:string, payload:any) {
-    return this._http.post(`${this.baseUrl}${url}`, payload);
-  }
-  putTypeRequest(url:string, payload:any) {
-    return this._http.put(`${this.baseUrl}${url}`, payload).pipe(map(res => {
-      return res;
-    }));
+  postTypeRequest(url:string) {
+    return this._http.post<any>(`${this.baseUrl}${url}`,null);
   }
 
 }

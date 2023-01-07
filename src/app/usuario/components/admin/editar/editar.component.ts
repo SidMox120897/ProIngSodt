@@ -27,12 +27,30 @@ export class EditarComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params)=>this.urlID=params['id']);
-
+    this.admin={
+      iduser:"",
+      nickname:"",
+      nameuser:"",
+      surname:"",
+      password:"123456789"
+    } as Admin;
     if(this.urlID!==''){
       this.adminServi.getAdmin(this.urlID).subscribe((res)=>{
         this.admin=res[0];
       });
+    this.passwordB='123456789';
     }
+  }
+
+  /* Funciones */
+
+  add(){
+    // var respuesta;
+    // this.adminServi.postAddAdmin(this.admin).subscribe((res)=>{
+    //   respuesta=res;
+    //   console.log(res);
+    // });
+    console.log("mox");
   }
 
 }
