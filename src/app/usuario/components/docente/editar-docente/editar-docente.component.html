@@ -1,0 +1,88 @@
+<form (ngSubmit)="add()">
+<div class="row">
+    <div class="col-6">
+    <div class="mb-3 mt-3">
+        <label for="Codigo" class="form-label">Codigo:</label>
+        <input  type="text"
+                name="Codigo"
+                class="form-control"
+                [(ngModel)]="doc.CodDocente"
+                placeholder="Codigo"
+                >
+    </div>
+    </div>
+    
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="nameDocente" class="form-label">Nombre:</label>
+            <input  type="text"
+                    name="nameDocente"
+                    class="form-control"
+                    [(ngModel)]="doc.nameDocente"
+                    placeholder="Nombre"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="surname" class="form-label">Apellido:</label>
+            <input  type="text"
+                    name="surname"
+                    class="form-control"
+                    [(ngModel)]="doc.surname"
+                    placeholder="Apellido"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="Correo" class="form-label">Correo:</label>
+            <input  type="email"
+                    name="Correo"
+                    class="form-control"
+                    [(ngModel)]="doc.correo"
+                    placeholder="Correo"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="id" class="form-label">Celular:</label>
+            <input  type="tel"
+                    name="Correo"
+                    class="form-control"
+                    [(ngModel)]="doc.phone"
+                    placeholder="Celular"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="password" class="form-label">Contraseña:</label>
+            <input  type="password"
+                    name="password"
+                    class="form-control"
+                    [(ngModel)]="doc.password"
+                    placeholder="Contraseña"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="passwordB" class="form-label">Repetir Contraseña:</label>
+            <input  type="password"
+                    name="passwordB"
+                    class="form-control"
+                    [(ngModel)]="passwordB"
+                    placeholder="Repetir Contraseña"
+                    >
+        </div>
+    </div>
+</div>
+<div class="row">
+    <button type="submit" class="btn btn-primary">Agregar</button>
+</div>
+</form>
+  
+  
+  

@@ -48,9 +48,9 @@ create table if not exists tEquipo(
 );
 
 create table if not exists tGrupo(
-	idGrupo varchar(6) not null,
 	CodEquipo varchar(6) not null,
     CodAlumno varchar(6) not null,
+    primary key(CodEquipo,CodAlumno),
 	FOREIGN KEY (CodEquipo) 
         REFERENCES tEquipo(CodEquipo),
 	FOREIGN KEY (CodAlumno)
@@ -72,9 +72,9 @@ insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) value
 insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) values("937393","Doc1","AppDoc1","*******@unsaac.edu.pe","983536306","123456789");
 insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) values("237323","AppDoc2","AppDoc2","*******@unsaac.edu.pe","983536306","123456789");
 
+insert into tEquipo(CodEquipo,CodDocente,CodAlumnoGuia,nombreEquipo,temas,descripcion,password) values("1","739373","120008","Equipo IA","Inteligencia Artificial/Aprendizaje Automatico","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area","1234");
 
-
-insert into tDocente(idGrupo,CodEquipo,CodAlumno) values("1","1","120897");
+insert into tGrupo(CodEquipo,CodAlumno) values("1","120897");
 
 
 

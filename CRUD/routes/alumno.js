@@ -37,7 +37,7 @@ router.post('/delete', async function (req, res, next) {
 
 
 router.get('/search', async function (req, res, next) {
-  GetInfo(scriptAll+' where CodAlumno = ?',[req.query.iduser],function(err,data){
+  GetInfo(scriptAll+' where CodAlumno = ?',[req.query.CodAlumno],function(err,data){
     if(err){
       res.send(err);
     }else{

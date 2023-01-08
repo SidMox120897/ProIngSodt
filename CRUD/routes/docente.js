@@ -23,7 +23,6 @@ router.post('/register', async function (req, res, next) {
   });
 });
 
-
 router.post('/delete', async function (req, res, next) {
   PutInfo(scriptDelete, [req.query.CodDocente],function(err,data){
     if(err){

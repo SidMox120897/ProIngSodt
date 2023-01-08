@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { NavComponent } from './components/shared/nav/nav.component';
 import { MenuComponent } from './components/shared/menu/menu.component';
 import { TablesComponent } from './components/shared/tables/tables.component';
@@ -14,7 +16,12 @@ import { EditarComponent } from './components/admin/editar/editar.component';
 import { MostrarComponent } from './components/admin/mostrar/mostrar.component';
 import { LoginComponent } from './components/login/login.component';
 import { EquipoComponent } from './components/equipo/equipo.component';
-import { FormsModule } from '@angular/forms';
+import { EditarAlumnoComponent } from './components/alumno/editar-alumno/editar-alumno.component';
+import { MostrarAlumnoComponent } from './components/alumno/mostrar-alumno/mostrar-alumno.component';
+import { MostrarDocenteComponent } from './components/docente/mostrar-docente/mostrar-docente.component';
+import { EditarDocenteComponent } from './components/docente/editar-docente/editar-docente.component';
+import { EditarEquipoComponent } from './components/equipo/editar-equipo/editar-equipo.component';
+import { EditarGrupoComponent } from './components/grupo/editar-grupo/editar-grupo.component';
 
 
 
@@ -32,7 +39,13 @@ import { FormsModule } from '@angular/forms';
     EditarComponent,
     MostrarComponent,
     LoginComponent,
-    EquipoComponent
+    EquipoComponent,
+    EditarAlumnoComponent,
+    MostrarAlumnoComponent,
+    MostrarDocenteComponent,
+    EditarDocenteComponent,
+    EditarEquipoComponent,
+    EditarGrupoComponent
   ],
   imports: [
     CommonModule,

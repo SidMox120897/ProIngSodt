@@ -1,7 +1,7 @@
 export interface Alumno {
-  Cod:String;
-  name:String;
+  CodAlumno:String;
+  nameAlumno:String;
   surname:String;
-  nickname:String;
-  password:string;
+  correo:String;
+  phone:String;
 }

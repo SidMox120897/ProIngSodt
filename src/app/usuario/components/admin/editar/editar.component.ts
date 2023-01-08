@@ -17,24 +17,23 @@ export class EditarComponent implements OnInit {
   passwordB:string='123456789';
 
   admin:Admin={
-    iduser:"",
-    nickname:"",
-    nameuser:"",
-    surname:"",
+    iduser:'',
+    nickname:'',
+    nameuser:'',
+    surname:'',
     password:"123456789"
-  };
+  } as Admin;
 
 
   ngOnInit(): void {
-    this.route.params.subscribe((params)=>this.urlID=params['id']);
-    this.admin={
-      iduser:"",
-      nickname:"",
-      nameuser:"",
-      surname:"",
-      password:"123456789"
-    } as Admin;
+    this.route.params.subscribe((params)=>{
+      if(params['id']){
+        this.urlID=params['id'];
+      }
+    });
+    
     if(this.urlID!==''){
+      console.log(this.urlID);
       this.adminServi.getAdmin(this.urlID).subscribe((res)=>{
         this.admin=res[0];
       });
@@ -44,12 +43,13 @@ export class EditarComponent implements OnInit {
 
   /* Funciones */
 
-  add(){
-    // var respuesta;
-    // this.adminServi.postAddAdmin(this.admin).subscribe((res)=>{
-    //   respuesta=res;
-    //   console.log(res);
-    // });
+  add(){    
+    console.log("mox");
+    var respuesta;
+    this.adminServi.postAddAdmin(this.admin).subscribe((res)=>{
+      respuesta=res;
+      console.log(res);
+    });
     console.log("mox");
   }
 

@@ -10,7 +10,7 @@ const con = mysql.createConnection({
 function PutInfo(sqlScript,ArrValues, callback){
   con.query(sqlScript,ArrValues, function(err,result){
     if(err) return callback(err,null);
-    return callback( null, 'Ok');
+    return callback( null, {mensaje:"ok",info:result});
   });
 };
 

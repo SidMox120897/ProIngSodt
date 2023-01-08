@@ -1,7 +1,8 @@
 export interface Docente {
-  cod:String;
-  name:String;
+  CodDocente:String;
+  nameDocente:String;
   surname:String;
-  categoria:String;
+  correo:String;
+  phone:String;
   password:string;
 }

@@ -10,6 +10,10 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { EditarComponent } from './usuario/components/admin/editar/editar.component';
 import { MostrarComponent } from './usuario/components/admin/mostrar/mostrar.component';
 import { LoginComponent } from './usuario/components/login/login.component';
+import { EditarDocenteComponent } from './usuario/components/docente/editar-docente/editar-docente.component';
+import { MostrarDocenteComponent } from './usuario/components/docente/mostrar-docente/mostrar-docente.component';
+import { EditarAlumnoComponent } from './usuario/components/alumno/editar-alumno/editar-alumno.component';
+import { MostrarAlumnoComponent } from './usuario/components/alumno/mostrar-alumno/mostrar-alumno.component';
 
 const routes: Routes = [
   {
@@ -48,11 +52,39 @@ const routes: Routes = [
       },
       {
         path:'docente',
-        component:DocenteComponent
+        component:DocenteComponent,
+        children:[
+          {
+            path:'editar',
+            component:EditarDocenteComponent
+          },
+          {
+            path:'editar/:id',
+            component:EditarDocenteComponent
+          },
+          {
+            path:'mostrar',
+            component:MostrarDocenteComponent
+          }
+        ]
       },
       {
         path:'alumno',
-        component:AlumnoComponent
+        component:AlumnoComponent,
+        children:[
+          {
+            path:'editar',
+            component:EditarAlumnoComponent
+          },
+          {
+            path:'editar/:id',
+            component:EditarAlumnoComponent
+          },
+          {
+            path:'mostrar',
+            component:MostrarAlumnoComponent
+          }
+        ]
       },
       {
         path:'grupo',

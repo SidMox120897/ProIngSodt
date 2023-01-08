@@ -1,0 +1,65 @@
+<form (ngSubmit)="add()">
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="id" class="form-label">Codigo:</label>
+            <input  type="text"
+                    name="id"
+                    class="form-control"
+                    [(ngModel)]="Alumno.CodAlumno"
+                    placeholder="ID user"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="nameAlumno" class="form-label">Nombre:</label>
+            <input  type="text"
+                    name="nameAlumno"
+                    class="form-control"
+                    [(ngModel)]="Alumno.nameAlumno"
+                    placeholder="Nombre"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="Apellido" class="form-label">Apellido:</label>
+            <input  type="text"
+                    name="Apellido"
+                    class="form-control"
+                    [(ngModel)]="Alumno.surname"
+                    placeholder="Apellido"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="Correo" class="form-label">Correo:</label>
+            <input  type="email"
+                    name="Correo"
+                    class="form-control"
+                    [(ngModel)]="Alumno.correo"
+                    placeholder="Correo"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="id" class="form-label">Celular:</label>
+            <input  type="tel"
+                    name="Correo"
+                    class="form-control"
+                    [(ngModel)]="Alumno.phone"
+                    placeholder="Celular"
+                    >
+        </div>
+    </div>
+</div>
+<div class="row">
+    <button type="submit" class="btn btn-primary">Agregar</button>
+</div>
+</form>
+  
+  
+  

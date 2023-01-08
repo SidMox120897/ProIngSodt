@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DocenteComponent implements OnInit {
 
   constructor() { }
-
+  menuitem:string[]=['editar','mostrar'];
   ngOnInit(): void {
   }
 

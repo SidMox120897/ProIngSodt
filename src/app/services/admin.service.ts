@@ -23,7 +23,7 @@ export class AdminService {
   }
 
   postAddAdmin(admin:Admin){
-    const url='/user/register?idUser='+admin.iduser+'&nickname='+admin.nickname+'&nameuser='+admin.nameuser+'&surnameuser='+admin.surname+'&password='+admin.password;
+    const url='user/register?idUser='+admin.iduser+'&nickname='+admin.nickname+'&nameuser='+admin.nameuser+'&surnameuser='+admin.surname+'&password='+admin.password;
     return this.API.postTypeRequest(url);
   }
 
