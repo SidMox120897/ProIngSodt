@@ -19,22 +19,39 @@ import { EditarEquipoComponent } from './usuario/components/equipo/editar-equipo
 import { MostrarEquipoComponent } from './usuario/components/equipo/mostrar-equipo/mostrar-equipo.component';
 import { EditarGrupoComponent } from './usuario/components/grupo/editar-grupo/editar-grupo.component';
 import { MostrarGrupoComponent } from './usuario/components/grupo/mostrar-grupo/mostrar-grupo.component';
+import { MainComponent } from './main-page/components/main/main.component';
+import { SearchComponent } from './main-page/components/search/search.component';
+import { EncuestaComponent } from './main-page/components/encuesta/encuesta.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:MainPageComponent
-  },
-  {
-    path:'login',
-    component:LoginComponent
+    component:MainPageComponent,
+    children:[
+      {
+        path:'',
+        component:MainComponent
+      },
+      {
+        path:'search',
+        component:SearchComponent
+      },
+      {
+        path:'encuesta',
+        component:EncuestaComponent
+      },
+      {
+        path:'login',
+        component:LoginComponent
+      }
+    ]
   },
   {
     path:'user',
     component:UsuarioComponent,
     children:[
       {
-        path:'welcome',
+        path:'',
         component:WelcomeComponent
       },
       {

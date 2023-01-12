@@ -1,0 +1,35 @@
+.info{
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    color: white;
+    width: 30%;
+    text-align: center;
+}
+
+.extra-info .col-3{
+    padding: 2rem;
+    text-align: center;
+}
+.extra-info .col-3 h4,i,p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.extra-info i{
+    font-size: 3rem;
+}
+
+.problemas{
+    position: relative;
+}
+.problemas .info2{
+    position: absolute;
+    padding: 3rem;
+    right: 5%;
+    bottom: 0;
+    width: 30%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 135, 121, 0.962);
+    border-radius: 20px 0 20px 0;
+}
