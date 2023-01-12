@@ -7,6 +7,7 @@ import { NavComponent } from './components/shared/nav/nav.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { SearchComponent } from './components/search/search.component';
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SearchComponent } from './components/search/search.component';
     NavComponent,
     FooterComponent,
     MainComponent,
-    SearchComponent
+    SearchComponent,
+    EncuestaComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { SearchComponent } from './components/search/search.component';
   ],
   exports:[
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    EncuestaComponent
   ]
 })
 export class MainPageModule { }
