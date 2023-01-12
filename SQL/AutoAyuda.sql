@@ -40,7 +40,6 @@ create table if not exists tEquipo(
     nombreEquipo varchar(50) not null,
     temas text not null,
     descripcion varchar(200),
-    password varchar(50) not null,
     FOREIGN KEY (CodDocente) 
         REFERENCES tDocente(CodDocente),
 	FOREIGN KEY (CodAlumnoGuia)
@@ -68,11 +67,11 @@ insert into tAlumno(CodAlumno,nameAlumno,surname,correo,phone) values("181417","
 insert into tAlumno(CodAlumno,nameAlumno,surname,correo,phone) values("131415","Luis David","Tello Justiniani","131415@unsaac.edu.pe","983536306");
 
 
-insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) values("739373","Gladys","Cutipa","*******@unsaac.edu.pe","983536306","123456789");
+insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) values("000001","Gladys","Cutipa","000001@unsaac.edu.pe","983536306","123456789");
 insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) values("937393","Doc1","AppDoc1","*******@unsaac.edu.pe","983536306","123456789");
 insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) values("237323","AppDoc2","AppDoc2","*******@unsaac.edu.pe","983536306","123456789");
 
-insert into tEquipo(CodEquipo,CodDocente,CodAlumnoGuia,nombreEquipo,temas,descripcion,password) values("1","739373","120008","Equipo IA","Inteligencia Artificial/Aprendizaje Automatico","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area","1234");
+insert into tEquipo(CodEquipo,CodDocente,CodAlumnoGuia,nombreEquipo,temas,descripcion) values("1","739373","120008","Equipo IA","Inteligencia Artificial/Aprendizaje Automatico","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area");
 
 insert into tGrupo(CodEquipo,CodAlumno) values("1","120897");
 

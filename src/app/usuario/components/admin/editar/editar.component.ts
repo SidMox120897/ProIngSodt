@@ -43,14 +43,12 @@ export class EditarComponent implements OnInit {
 
   /* Funciones */
 
-  add(){    
-    console.log("mox");
+  add(){
     var respuesta;
     this.adminServi.postAddAdmin(this.admin).subscribe((res)=>{
       respuesta=res;
       console.log(res);
     });
-    console.log("mox");
   }
 
 }

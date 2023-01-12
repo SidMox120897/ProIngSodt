@@ -9,6 +9,8 @@ export class GrupoComponent implements OnInit {
 
   constructor() { }
 
+  menuitem:string[]=['editar','mostrar'];
+  
   ngOnInit(): void {
   }
 

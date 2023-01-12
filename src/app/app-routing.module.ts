@@ -14,6 +14,11 @@ import { EditarDocenteComponent } from './usuario/components/docente/editar-doce
 import { MostrarDocenteComponent } from './usuario/components/docente/mostrar-docente/mostrar-docente.component';
 import { EditarAlumnoComponent } from './usuario/components/alumno/editar-alumno/editar-alumno.component';
 import { MostrarAlumnoComponent } from './usuario/components/alumno/mostrar-alumno/mostrar-alumno.component';
+import { EquipoComponent } from './usuario/components/equipo/equipo.component';
+import { EditarEquipoComponent } from './usuario/components/equipo/editar-equipo/editar-equipo.component';
+import { MostrarEquipoComponent } from './usuario/components/equipo/mostrar-equipo/mostrar-equipo.component';
+import { EditarGrupoComponent } from './usuario/components/grupo/editar-grupo/editar-grupo.component';
+import { MostrarGrupoComponent } from './usuario/components/grupo/mostrar-grupo/mostrar-grupo.component';
 
 const routes: Routes = [
   {
@@ -88,7 +93,39 @@ const routes: Routes = [
       },
       {
         path:'grupo',
-        component:GrupoComponent
+        component:GrupoComponent,
+        children:[
+          {
+            path:'editar',
+            component:EditarGrupoComponent
+          },
+          {
+            path:'editar/:id',
+            component:EditarGrupoComponent
+          },
+          {
+            path:'mostrar',
+            component:MostrarGrupoComponent
+          }
+        ]
+      },
+      {
+        path:'equipo',
+        component:EquipoComponent,
+        children:[
+          {
+            path:'editar',
+            component:EditarEquipoComponent
+          },
+          {
+            path:'editar/:id',
+            component:EditarEquipoComponent
+          },
+          {
+            path:'mostrar',
+            component:MostrarEquipoComponent
+          }
+        ]
       }
     ]
   }

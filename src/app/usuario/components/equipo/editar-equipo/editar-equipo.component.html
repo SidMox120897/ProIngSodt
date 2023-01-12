@@ -1,1 +1,75 @@
-<p>editar-equipo works!</p>
+<form (ngSubmit)="add()">
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="CodEquipo" class="form-label">Cod. Equipo:</label>
+            <input  type="text"
+                    name="CodEquipo"
+                    class="form-control"
+                    [(ngModel)]="equipo.CodEquipo"
+                    placeholder="Cod. Equipo"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="CodDocente" class="form-label">Cod. Docente:</label>
+            <input  type="text"
+                    name="CodDocente"
+                    class="form-control"
+                    [(ngModel)]="equipo.CodDocente"
+                    placeholder="Cod. Docente"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="CodAlumnoGuia" class="form-label">Cod. Alumno Guia:</label>
+            <input  type="text"
+                    name="CodAlumnoGuia"
+                    class="form-control"
+                    [(ngModel)]="equipo.CodAlumnoGuia"
+                    placeholder="Cod. Alumno Guia"
+                    >
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3 mt-3">
+            <label for="nombreEquipo" class="form-label">Nombre Equipo:</label>
+            <input  type="text"
+                    name="nombreEquipo"
+                    class="form-control"
+                    [(ngModel)]="equipo.nombreEquipo"
+                    placeholder="Nombre Equipo"
+                    >
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="mb-3 mt-3">
+            <label for="temas" class="form-label">Temas:</label>
+            <textarea  type="text"
+                    name="temas"
+                    class="form-control"
+                    rows="5"
+                    [(ngModel)]="equipo.temas"
+                    placeholder="Temas que se llevan en el grupo"
+                    ></textarea>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="mb-3 mt-3">
+            <label for="descripcion" class="form-label">Descripcion:</label>
+            <textarea  type="text"
+                    name="descripcion"
+                    class="form-control"
+                    rows="5"
+                    [(ngModel)]="equipo.descripcion"
+                    placeholder="Descripcion del Grupo"
+                    ></textarea>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <button type="submit" class="btn btn-primary">Agregar</button>
+</div>
+</form>

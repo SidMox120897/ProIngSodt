@@ -22,6 +22,8 @@ import { MostrarDocenteComponent } from './components/docente/mostrar-docente/mo
 import { EditarDocenteComponent } from './components/docente/editar-docente/editar-docente.component';
 import { EditarEquipoComponent } from './components/equipo/editar-equipo/editar-equipo.component';
 import { EditarGrupoComponent } from './components/grupo/editar-grupo/editar-grupo.component';
+import { MostrarEquipoComponent } from './components/equipo/mostrar-equipo/mostrar-equipo.component';
+import { MostrarGrupoComponent } from './components/grupo/mostrar-grupo/mostrar-grupo.component';
 
 
 
@@ -45,7 +47,9 @@ import { EditarGrupoComponent } from './components/grupo/editar-grupo/editar-gru
     MostrarDocenteComponent,
     EditarDocenteComponent,
     EditarEquipoComponent,
-    EditarGrupoComponent
+    EditarGrupoComponent,
+    MostrarEquipoComponent,
+    MostrarGrupoComponent
   ],
   imports: [
     CommonModule,

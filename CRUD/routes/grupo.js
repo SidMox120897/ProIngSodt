@@ -8,12 +8,12 @@ const router = express.Router();
 /*Personal BooksXD */
 const { GetInfo, PutInfo }=require('../connection/connection')
 const scriptAll='select * from tGrupo';
-const scriptInsertar='insert into tGrupo(idGrupo,CodEquipo,CodAlumno) values(?,?,?)';
-const scriptDelete='delete from tGrupo where idGrupo = ?';
+const scriptInsertar='insert into tGrupo(CodEquipo,CodAlumno) values(?,?)';
+const scriptDelete='delete from tGrupo where (CodEquipo = ? AND CodAlumno = ?)';
 
 
 router.post('/register', async function (req, res, next) {
-  var ArrValues=[req.query.idGrupo, req.query.CodEquipo, req.query.CodAlumno];
+  var ArrValues=[req.query.CodEquipo, req.query.CodAlumno];
   PutInfo(scriptInsertar, ArrValues,function(err,data){
     if(err){
       res.send(err);
@@ -24,7 +24,7 @@ router.post('/register', async function (req, res, next) {
 });
 
 router.post('/delete', async function (req, res, next) {
-  PutInfo(scriptDelete, [req.query.idGrupo],function(err,data){
+  PutInfo(scriptDelete, [req.query.CodEquipo, req.query.CodAlumno],function(err,data){
     if(err){
       res.send(err);
     }else{
@@ -36,7 +36,7 @@ router.post('/delete', async function (req, res, next) {
 /*GETs */
 
 router.get('/search', async function (req, res, next) {
-  GetInfo(scriptAll+' where idGrupo = ?',[req.query.iduser],function(err,data){
+  GetInfo(scriptAll+' where CodEquipo = ?',[req.query.CodEquipo],function(err,data){
     if(err){
       res.send(err);
     }else{

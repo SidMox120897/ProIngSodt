@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipoComponent implements OnInit {
 
+  menuitem:string[]=['editar','mostrar'];
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,30 @@
-<p>editar-grupo works!</p>
+<form (ngSubmit)="add()">
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3 mt-3">
+                <label for="CodEquipo" class="form-label">Cod. Equipo:</label>
+                <input  type="text"
+                        name="CodEquipo"
+                        class="form-control"
+                        [(ngModel)]="grupo.CodEquipo"
+                        placeholder="Cod. Equipo"
+                        >
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mb-3 mt-3">
+                <label for="CodDocente" class="form-label">Cod. Docente:</label>
+                <input  type="text"
+                        name="CodDocente"
+                        class="form-control"
+                        [(ngModel)]="grupo.CodAlumno"
+                        placeholder="Cod. Docente"
+                        >
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+    </div>
+    </form>

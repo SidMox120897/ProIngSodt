@@ -31,4 +31,9 @@ export class AdminService {
     const url='user/delete?iduser='+adminid;
     return this.API.postTypeRequest(url);
   }
+
+  postLoggerAdmin(nickname:string,password:string){
+    const url='user/login?nickname='+nickname+'&password='+password;
+    return this.API.postTypeRequest(url);
+  }
 }

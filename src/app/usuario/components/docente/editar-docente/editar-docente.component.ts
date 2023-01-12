@@ -25,6 +25,8 @@ export class EditarDocenteComponent implements OnInit {
     password:''
   } as Docente;
 
+
+
   ngOnInit(): void {
     this.route.params.subscribe((params)=>{
       if(params['id']){
