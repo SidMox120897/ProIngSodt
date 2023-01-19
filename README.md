@@ -1,3 +1,18 @@
+### Datos Academicos
+
+- **Universidad:** Universidad Nacional de San Antonio Abad del Cusco
+- **Facultad:** De ingenieria electrica, electronica, informatica y mecanica
+- **Escuela Profesional:** Ingenieria Informatica y de Sistemas
+#### Docente de Teoria:
+- **Ing.**
+#### Docente de Laboratorio
+- **Ing. **
+#### Colaboradores:
+- **CUETO SANCHEZ CARLA PALOMA** [PALOMA](https://github.com/carlasanchez15)
+- **HUAHUATICO SORIA RONALD** [RONALD](https://github.com/Romehe369)
+- **QUINTO CATACHURA LADY DIANA** [LADY](https://github.com/Diana-Quinto)
+- **TELLO JUSTINIANI LUIS DAVID** [LUIS](https://github.com/SidMox120897)
+---
 # Sistema
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
