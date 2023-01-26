@@ -5,12 +5,10 @@
     font-family: Arial, Verdana, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: bold;
-    }
-    
-    .pregunta {
+}   
+.pregunta {
     color: #0000ff;
-    }
-    
-    .respuestas {
+} 
+.respuestas {
     color: #000000;
-    }
+}
