@@ -8,6 +8,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { SearchComponent } from './components/search/search.component';
 import { EncuestaComponent } from './components/encuesta/encuesta.component';
+import { AutoresComponent } from './components/autores/autores.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { EncuestaComponent } from './components/encuesta/encuesta.component';
     FooterComponent,
     MainComponent,
     SearchComponent,
-    EncuestaComponent
+    EncuestaComponent,
+    AutoresComponent
   ],
   imports: [
     CommonModule,
