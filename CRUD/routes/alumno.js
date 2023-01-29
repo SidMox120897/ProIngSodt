@@ -14,22 +14,30 @@ const scriptInsertar='insert into tAlumno(CodAlumno,nameAlumno,surname,correo,ph
 const scriptDelete='delete from tAlumno where CodAlumno = ?';
 
 router.post('/register', async function (req, res, next) {
-  var ArrValues=[req.query.CodAlumno, req.query.nameAlumno, req.query.surname,req.query.correo,req.query.phone];
+  var ArrValues=[
+    req.query.CodAlumno,
+    req.query.nameAlumno,
+    req.query.surname,
+    req.query.correo,
+    req.query.phone
+  ];
   var msj='';
   msj+=valCodigo(req.query.CodAlumno,'El Codigo');
   msj+=valName(req.query.nameAlumno,'El nombre','Volver a escribir');
   msj+=valName(req.query.surname,'El Apellido','Volver a escribir');
+  //msj+=valCorreo();
+  msj+=valPhone(req.query.phone,'El numero de celular');
   
   if(msj===''){
     PutInfo(scriptInsertar, ArrValues,function(err,data){
       if(err){
-        res.send(err);
+        res.send( {status:0 , mensaje:err});
       }else{
-        res.send(data);
+        res.send({status:1, mensaje:data});
       }
     });
   }else{
-    res.send({mensaje:msj});
+    res.send({status:0 , mensaje:msj});
   }
 });
 
