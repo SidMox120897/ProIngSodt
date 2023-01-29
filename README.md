@@ -8,6 +8,7 @@
 #### Docente de Laboratorio
 - **Ing. **
 #### Colaboradores:
+- **ANDRADE ESCOBAR LUIS**
 - **CUETO SANCHEZ CARLA PALOMA** [PALOMA](https://github.com/carlasanchez15)
 - **HUAHUATICO SORIA RONALD** [RONALD](https://github.com/Romehe369)
 - **QUINTO CATACHURA LADY DIANA** [LADY](https://github.com/Diana-Quinto)
