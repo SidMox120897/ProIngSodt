@@ -11,5 +11,8 @@ export class EncuestaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+lolo(){
+  
 }
+}
+
