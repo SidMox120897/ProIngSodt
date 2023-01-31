@@ -19,13 +19,14 @@ export class AlumnoService {
     return this.API.getTypeRequest(url);
   }
 
+
   postAddAlumno(alumno:Alumno){
     const url='alumno/register?CodAlumno='+alumno.CodAlumno
                               +'&nameAlumno='+alumno.nameAlumno
                               +'&surname='+alumno.surname
-                              +'&correo'+alumno.correo
-                              +'&phone'+alumno.phone;
-    return this.API.getTypeRequest(url);
+                              +'&correo='+alumno.correo
+                              +'&phone='+alumno.phone;
+    return this.API.postTypeRequest(url);
   }
 
   postDeleteAlumno(Alumid:string){

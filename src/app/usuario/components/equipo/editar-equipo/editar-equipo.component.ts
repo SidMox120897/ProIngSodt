@@ -44,7 +44,12 @@ export class EditarEquipoComponent implements OnInit {
     var respuesta;
     this.equipoServi.postAddEquipo(this.equipo).subscribe((res)=>{
       respuesta=res;
-      console.log(res);
+      //console.log(res);
+      if(res.status===0){
+        console.log(res.respuesta);
+      }else{
+        console.log(res.respuesta);
+      }
     });
   }
 

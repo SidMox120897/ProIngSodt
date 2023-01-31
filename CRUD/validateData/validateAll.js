@@ -28,7 +28,8 @@ function valCodigo(srt, msjA='', msjB=''){
 }
 
 function valCorreo(srt, msjA='', msjB=''){
-    
+    //@
+    //unsaac.edu.pe
 }
 
 function valPhone(srt, msjA='', msjB=''){
@@ -45,7 +46,7 @@ function valPhone(srt, msjA='', msjB=''){
 function valPassword(srt, msjA='', msjB=''){
     var mensaje='';
     if(!isOnlyLetterAndNum(srt)){
-        mensaje+=msjA+' no debe tener letras '+msjB+'\n';
+        mensaje+=msjA+' no debe tener simbolos '+msjB+'\n';
     }
     return mensaje;
 }
