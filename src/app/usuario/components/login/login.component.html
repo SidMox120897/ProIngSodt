@@ -1,33 +1,71 @@
-<div class="p-5">
-  <div class="row p-5">
-    <div class="col-8">
-      <img src="assets/img/login.png" alt="" class="h-100 w-100">
-    </div>
-    <div class="col-4">
-      <h2>Login</h2>
-      <form (ngSubmit)="logear()">
-        <div class="mb-3 mt-3">
-          <label for="nickname" class="form-label">Nickname:</label>
-          <input type="text"
-                class="form-control"
-                id="nickname"
-                placeholder="Enter Nickname"
-                name="Nickname"
-                [(ngModel)]="id"
-                >
+<!doctype html>
+<!--[if lte IE 9]>
+<html lang="en" class="oldie">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="all" href="login.component.css" />
+</head>
+<!--------cuerpo----------->
+<body>
+    <div class="area">
+      <ul class="circles">
+      
+        <div class="p-5">
+          <div class="row p-5">
+            <div class="col-8">
+            
+              <img src="assets/img/login.png" alt="" class="h-100 w-100">
+            </div>
+            <div class="col-4">
+              <h2>Login</h2>
+              <form (ngSubmit)="logear()">
+                <div class="mb-3 mt-3">
+
+                  
+                  <label for="nickname" class="form-label">nickname:</label>
+                  <input type="text"
+                        class="form-control"
+                        id="nickname"
+                        placeholder="Enter Nickname"
+                        name="Nickname"
+                        [(ngModel)]="id"
+                        >
+                  
+                </div>
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">password:</label>
+                  <input type="password"
+                        class="form-control"
+                        id="pwd"
+                        placeholder="Enter password"
+                        name="pswd"
+                        [(ngModel)]="password"
+                        >
+                </div>
+                <strong><button type="submit" class="btn btn-primary">Ingresa</button></strong>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="pwd" class="form-label">Password:</label>
-          <input type="password"
-                class="form-control"
-                id="pwd"
-                placeholder="Enter password"
-                name="pswd"
-                [(ngModel)]="password"
-                >
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+  <!------------------------ciclos------------------------------->
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+      </ul>
     </div>
-  </div>
-</div>
+  </body>
+</html>
+
+

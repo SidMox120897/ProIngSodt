@@ -1,9 +1,9 @@
 .pregresp {
-    border: 1px solid #7DA5E0;
-    padding: 10px;
-    margin: 10px;
+    border: 7px solid #7DA5E0;
+    padding: 20px;
+    margin: 40px;
     font-family: Arial, Verdana, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
 }   
 .pregunta {
@@ -11,4 +11,26 @@
 } 
 .respuestas {
     color: #000000;
-}
+    font-size: 18px
+}  
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  
+    border: 2px solid lightskyblue;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 2px;
+  }
+  
+input:checked {
+    border: 8px solid lightskyblue;
+  }
+  
