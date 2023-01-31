@@ -4,6 +4,7 @@
 <form (ngSubmit)="add1()">
 <!--<form name="formulario" method="post" action=""> -->
   <div class="pregresp">
+      <h3>Responde las siguientes preguntas : </h3>
       <div class="pregunta">¿Pensó alguna vez en dejar los estudios en la universidad?<br />
       </div>
       <div class="respuestas">
@@ -71,39 +72,96 @@
       <div class="pregunta">¿Cómo considera su rendimiento académico respecto al rendimiento de sus compañeros?<br />
       </div>
       <div class="respuestas">
-        <input type="radio" id="rpta21" name="preg11" value="1" /> Peor que la mayoría<br />
-        <input type="radio" id="rpta22" name="preg11" value="2" /> Igual que la mayoría<br />
-        <input type="radio" id="rpta23" name="preg11" value="2" /> Mejor que la mayoría<br />
+        <input type="radio" id="rpta21" name="preg11" value="3" /> Peor que la mayoría<br />
+        <input type="radio" id="rpta22" name="preg11" value="4" /> Igual que la mayoría<br />
+        <input type="radio" id="rpta23" name="preg11" value="5" /> Mejor que la mayoría<br />
       </div>
       <div class="pregunta">Al iniciar la carrera, usted: Tenía una idea precisa sobre del tipo de estudios que quería realizar<br />
       </div>
       <div class="respuestas">
-        <input type="radio" id="rpta24" name="preg19" value="1" /> Sí<br />
-        <input type="radio" id="rpta25" name="preg19" value="2" /> No<br />
-      </div>
-      <div class="pregunta">¿Considera usted que las malas amistades son un factor el cual podría causar su deserción?<br />
-      </div>
-      <div class="respuestas">
-        <input type="radio" id="rpta26" name="preg12" value="1" /> Estaba indeciso entre dos o tres elecciones de carreras<br />
-        <input type="radio" id="rpta27" name="preg12" value="2" /> No tenía ninguna idea sobre lo que quería estudiar<br />
-        <input type="radio" id="rpta28" name="preg12" value="2" /> No tenía ganas de realizar estudios superiores<br />
+        <input type="radio" id="rpta24" name="preg12" value="1" /> Estaba indeciso entre dos o tres elecciones de carreras<br />
+        <input type="radio" id="rpta25" name="preg12" value="2" /> No tenía ninguna idea sobre lo que quería estudiar<br />
+        <input type="radio" id="rpta26" name="preg12" value="2" /> No tenía ganas de realizar estudios superiores<br />      
       </div>
       <div class="pregunta">¿En el momento previo al ingresar a la universidad, usted recibió orientación vocacional?<br />
       </div>
       <div class="respuestas">
-        <input type="radio" id="rpta29" name="preg13" value="1" /> Por el Colegio<br />
-        <input type="radio" id="rpta30" name="preg13" value="2" /> Por la Universidad<br />
-         <input type="radio" id="rpta31" name="preg13" value="1" /> Por un profesional especializado<br />
-        <input type="radio" id="rpta32" name="preg13" value="2" /> Ninguno<br />
+        <input type="radio" id="rpta27" name="preg13" value="6" /> Por el Colegio<br />
+        <input type="radio" id="rpta28" name="preg13" value="7" /> Por la Universidad<br />
+        <input type="radio" id="rpta29" name="preg13" value="8" /> Por un profesional especializado<br />
+        <input type="radio" id="rpta30" name="preg13" value="9" /> Ninguno<br />
       </div>
-
       <div class="pregunta">Respecto a la asistencia a las clases, indica si asististe regularmente a la mayoría de las materias en las que estuviste matriculado.<br />
       </div>
       <div class="respuestas">
-        <input type="radio" id="rpta33" name="preg14" value="1" /> Nunca/ Casi nunca<br />
-        <input type="radio" id="rpta34" name="preg14" value="2" /> Alguna vez<br />
-         <input type="radio" id="rpta35" name="preg14" value="3" /> Frecuentemente<br />
-        <input type="radio" id="rpta36" name="preg14" value="4" /> Siempre/ Casi siempre<br />
+        <input type="radio" id="rpta31" name="preg14" value="6" /> Nunca/ Casi nunca<br />
+        <input type="radio" id="rpta32" name="preg14" value="7" /> Alguna vez<br />
+        <input type="radio" id="rpta33" name="preg14" value="8" /> Frecuentemente<br />
+        <input type="radio" id="rpta34" name="preg14" value="9" /> Siempre/ Casi siempre<br />
+      </div>
+      <div class="pregunta">En general ¿Con que frecuencia planifica su tiempo?<br />
+      </div>
+      <div class="respuestas">
+        <input type="radio" id="rpta35" name="preg15" value="6" /> Siempre<br />
+        <input type="radio" id="rpta36" name="preg15" value="7" /> Casi siempre<br />
+        <input type="radio" id="rpta37" name="preg15" value="8" /> A veces<br />
+        <input type="radio" id="rpta38" name="preg15" value="9" /> Nunca<br />
+      </div>
+      <div class="pregunta">¿Tienes problemas en casa durante los estudios universitarios?<br />
+      </div>
+      <div class="respuestas">
+        <input type="radio" id="rpta39" name="preg16" value="6" /> Siempre<br />
+        <input type="radio" id="rpta40" name="preg16" value="7" /> Casi siempre<br />
+        <input type="radio" id="rpta41" name="preg16" value="8" /> A veces<br />
+        <input type="radio" id="rpta42" name="preg16" value="9" /> Nunca<br />
+      </div>
+      <div class="pregunta">¿Con qué frecuencia requiere ayuda de otras personas o de un servicio para poder entender mejor el material asignado en clase?<br />
+      </div>
+      <div class="respuestas">
+        <input type="radio" id="rpta43" name="preg17" value="6" /> Siempre<br />
+        <input type="radio" id="rpta44" name="preg17" value="7" /> Casi siempre<br />
+        <input type="radio" id="rpta45" name="preg17" value="8" /> A veces<br />
+        <input type="radio" id="rpta46" name="preg17" value="9" /> Nunca<br />
+      </div>
+      <div class="pregunta">¿Tienes problemas en casa durante los estudios universitarios?<br />
+      </div>
+      <div class="respuestas">
+        <input type="radio" id="rpta47" name="preg18" value="6" /> Siempre<br />
+        <input type="radio" id="rpta48" name="preg18" value="7" /> Casi siempre<br />
+        <input type="radio" id="rpta49" name="preg18" value="8" /> A veces<br />
+        <input type="radio" id="rpta50" name="preg18" value="9" /> Nunca<br />
+      </div>
+      <div class="pregunta">¿Obtienes buenas calificaciones en tus cursos, materias y/o trabajos?<br />
+      </div>
+      <div class="respuestas">
+        <input type="radio" id="rpta51" name="preg19" value="6" /> Siempre<br />
+        <input type="radio" id="rpta52" name="preg19" value="7" /> Casi siempre<br />
+        <input type="radio" id="rpta53" name="preg19" value="8" /> A veces<br />
+        <input type="radio" id="rpta54" name="preg19" value="9" /> Nunca<br />
+      </div>
+      <div class="pregunta">Señala si viviste alguna de las siguientes experiencias negativas en la universidad. (Puedes señalar más de una opción) <br />
+      </div>
+      <div class="respuestas">
+        <input type="radio" id="rpta55" name="preg95" value="101" /> Acoso<br />
+        <input type="radio" id="rpta56" name="preg96" value="102" /> Bullying<br />
+        <input type="radio" id="rpta57" name="preg97" value="103" /> Discriminación<br />
+        <input type="radio" id="rpta58" name="preg98" value="104" /> Indiferencia<br />
+        <input type="radio" id="rpta59" name="preg99" value="105" /> Otras experiencias traumáticas<br />
+        <input type="radio" id="rpta60" name="preg100" value="2" /> No tuve experiencias negativas.<br />
+      </div>
+      <div class="pregunta">¿Cuáles considera usted que son los factores  que influyen en una posible decisión de retirarse de la carrera?  (Puedes señalar más de una opción)  <br />
+      </div>
+      <div class="respuestas">
+        <input type="radio" id="rpta61" name="preg101" value="101" /> Dificultades económicas<br />
+        <input type="radio" id="rpta62" name="preg102" value="102" /> Ubicación laboral<br />
+        <input type="radio" id="rpta63" name="preg103" value="103" /> La falta de ayuda específica de parte de la universidad<br />
+        <input type="radio" id="rpta64" name="preg104" value="104" /> La errada elección de la carrera<br />
+        <input type="radio" id="rpta65" name="preg105" value="105" /> Cambio de ciudad<br />
+        <input type="radio" id="rpta66" name="preg106" value="106" /> Aplazamiento del semestre<br />
+        <input type="radio" id="rpta67" name="preg107" value="107" /> Dificultades familiares<br />
+        <input type="radio" id="rpta68" name="preg108" value="108" /> Bajo rendimiento académico<br />
+        <input type="radio" id="rpta69" name="preg109" value="109" /> Enfermedad<br />
+        <input type="radio" id="rpta70" name="preg110" value="110" /> Paros/huelgas/política<br />
       </div>
     <p></p>
     <!-- Botón de envío de formulario -->
