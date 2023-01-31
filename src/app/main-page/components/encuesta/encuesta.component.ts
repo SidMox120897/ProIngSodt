@@ -36,7 +36,6 @@ export class EncuestaComponent implements OnInit {
         }
       }
     }
-    //alert("Tiene tantos "+valores.length);
     // Los pesos por cada pregunta para determinar un porcentaje
     let puntajes: number[]=[25,1,1,1,2,5,3,5,1,7,10,2,2,2,5,2,2,14,5,5];
     // Recuperamos los datos anteriores, y agregar
