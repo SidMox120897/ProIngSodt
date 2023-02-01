@@ -42,10 +42,11 @@ export class EncuestaComponent implements OnInit {
     let puntaje: number=0.0;
    // Probabilidad de desercion
     for (let i = 0; i < puntajes.length; i++){
+      console.log(valores[i]);
       puntaje+=puntajes[i]*valores[i];
       }
     // Mostramos un mensaje  
-    alert("Tienes una probabilidad de deserción de : "+puntaje/100+" %");
+    alert("Tienes una probabilidad de deserción de : "+puntaje+" %");
   } 
 }
 
