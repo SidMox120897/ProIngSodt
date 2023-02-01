@@ -14,6 +14,7 @@ const scriptInsertar='insert into tAlumno(CodAlumno,nameAlumno,surname,correo,ph
 const scriptDelete='delete from tAlumno where CodAlumno = ?';
 
 router.post('/register', async function (req, res, next) {
+  //Valores que se recibe
   var ArrValues=[
     req.query.CodAlumno,
     req.query.nameAlumno,
@@ -21,23 +22,27 @@ router.post('/register', async function (req, res, next) {
     req.query.correo,
     req.query.phone
   ];
+  //Se Crea un mensaje validando los datos que se RECIBEN
   var msj='';
   msj+=valCodigo(req.query.CodAlumno,'El Codigo');
   msj+=valName(req.query.nameAlumno,'El nombre','Volver a escribir');
   msj+=valName(req.query.surname,'El Apellido','Volver a escribir');
   //msj+=valCorreo();
   msj+=valPhone(req.query.phone,'El numero de celular');
-  
+  //Si el msj (mensaje) esta vacio
+  //significa que no se encontro ningun error
+  //despues se busca un error relacionado a la conexion con la BD
+  //puesto esto se envia un mensaje confirmando las respuestas con el status
   if(msj===''){
     PutInfo(scriptInsertar, ArrValues,function(err,data){
       if(err){
-        res.send( {status:0 , mensaje:err});
+        res.send({status:0 , respuesta:err});
       }else{
-        res.send({status:1, mensaje:data});
+        res.send({status:1, respuesta:data});
       }
     });
   }else{
-    res.send({status:0 , mensaje:msj});
+    res.send({status:0 , respuesta:msj});
   }
 });
 

@@ -20,7 +20,7 @@ export class EditarAlumnoComponent implements OnInit {
     surname:'',
     correo:'',
     phone:''
-   }as Alumno;
+  }as Alumno;
 
   ngOnInit(): void {
     this.route.params.subscribe((params)=>{
@@ -40,7 +40,12 @@ export class EditarAlumnoComponent implements OnInit {
     var respuesta;
     this.alumnServi.postAddAlumno(this.Alumno).subscribe((res)=>{
       respuesta=res;
-      console.log(res);
+      //console.log(res);
+      if(res.status===0){
+        console.log(res.respuesta);
+      }else{
+        console.log(res.respuesta);
+      }
     });
   }
 

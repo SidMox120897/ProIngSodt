@@ -7,20 +7,42 @@ const router = express.Router();
 
 /*Personal BooksXD */
 const { GetInfo, PutInfo }=require('../connection/connection')
+const {valName, valCodigo, valCorreo, valPhone, valPassword}=require('../validateData/validateAll');
+
 const scriptAll='select * from tDocente';
 const scriptInsertar='insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) values(?,?,?,?,?,?)';
 const scriptDelete='delete from tDocente where CodDocente = ?';
 
 
 router.post('/register', async function (req, res, next) {
-  var ArrValues=[req.query.CodDocente, req.query.nameDocente, req.query.surname,req.query.correo,req.query.phone,req.query.password];
-  PutInfo(scriptInsertar, ArrValues,function(err,data){
-    if(err){
-      res.send(err);
-    }else{
-      res.send(data);
-    }
-  });
+  var ArrValues=[
+    req.query.CodDocente,
+    req.query.nameDocente,
+    req.query.surname,
+    req.query.correo,
+    req.query.phone,
+    req.query.password
+  ];
+  //Se Crea un mensaje validando los datos que se RECIBEN
+  var msj='';
+  msj+=valCodigo(req.query.CodDocente,'El Codigo Docente');
+  msj+=valName(req.query.nameDocente,'El nombre del Docente','Volver a escribir');
+  msj+=valName(req.query.surname,'El Apellido del Docente','Volver a escribir');
+  //msj+=valCorreo();
+  msj+=valPhone(req.query.phone,'El numero de celular');
+  msj+=valPassword(req.query.password,'La contraseña ','como (*/-+)');
+
+  if(msj===''){
+    PutInfo(scriptInsertar, ArrValues,function(err,data){
+      if(err){
+        res.send({status:0 , respuesta:err});
+      }else{
+        res.send({status:1, respuesta:data});
+      }
+    });
+  }else{
+    res.send({status:0 , respuesta:msj});
+  }
 });
 
 router.post('/delete', async function (req, res, next) {

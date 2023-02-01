@@ -47,7 +47,12 @@ export class EditarComponent implements OnInit {
     var respuesta;
     this.adminServi.postAddAdmin(this.admin).subscribe((res)=>{
       respuesta=res;
-      console.log(res);
+      //console.log(res);
+      if(res.status===0){
+        console.log(res.respuesta);
+      }else{
+        console.log(res.respuesta);
+      }
     });
   }
 
