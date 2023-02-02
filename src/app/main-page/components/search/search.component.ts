@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Equipo } from 'src/app/interfaces/equipo';
+import { EquipoService } from 'src/app/services/equipo.service';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private equipoServi:EquipoService) { }
+  bodyObject:Equipo[]=[];
 
   ngOnInit(): void {
+    this.equipoServi.getallEquipo().subscribe((res)=>{
+      this.bodyObject=res;
+    });
   }
-
 }
