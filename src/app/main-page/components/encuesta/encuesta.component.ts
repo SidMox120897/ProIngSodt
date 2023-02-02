@@ -11,15 +11,6 @@ export class EncuestaComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-  shomodel(){
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Your work has been saved',
-      showConfirmButton: false,
-      timer: 1500
-    })
-  }
   add1(){
     // Obtenemos todos los constantes
     let ids: string[] = ["rpta1","rpta2","rpta3","rpta4","rpta5","rpta6","rpta7","rpta8","rpta9","rpta10","rpta11","rpta12","rpta13","rpta14","rpta15","rpta16","rpta17","rpta18","rpta19","rpta20","rpta21","rpta22","rpta23","rpta24","rpta25","rpta26","rpta27","rpta28","rpta29","rpta30","rpta31","rpta32","rpta33","rpta34","rpta35","rpta36","rpta37","rpta38","rpta39","rpta40","rpta41","rpta42","rpta43","rpta44","rpta45","rpta46","rpta47","rpta48","rpta49","rpta50","rpta51","rpta52","rpta53","rpta54","rpta55","rpta56","rpta57","rpta58","rpta59","rpta60","rpta61","rpta62","rpta63","rpta64","rpta65","rpta66","rpta67","rpta68","rpta69","rpta70"];
