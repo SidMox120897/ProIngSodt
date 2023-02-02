@@ -59,6 +59,10 @@ const routes: Routes = [
         component:AdminComponent,
         children:[
           {
+            path:'',
+            component:EditarComponent
+          },
+          {
             path:'editar',
             component:EditarComponent
           },
@@ -76,6 +80,10 @@ const routes: Routes = [
         path:'docente',
         component:DocenteComponent,
         children:[
+          {
+            path:'',
+            component:EditarDocenteComponent
+          },
           {
             path:'editar',
             component:EditarDocenteComponent
@@ -95,6 +103,10 @@ const routes: Routes = [
         component:AlumnoComponent,
         children:[
           {
+            path:'',
+            component:EditarAlumnoComponent
+          },
+          {
             path:'editar',
             component:EditarAlumnoComponent
           },
@@ -113,6 +125,10 @@ const routes: Routes = [
         component:GrupoComponent,
         children:[
           {
+            path:'',
+            component:EditarGrupoComponent
+          },
+          {
             path:'editar',
             component:EditarGrupoComponent
           },
@@ -130,6 +146,10 @@ const routes: Routes = [
         path:'equipo',
         component:EquipoComponent,
         children:[
+          {
+            path:'',
+            component:EditarEquipoComponent
+          },
           {
             path:'editar',
             component:EditarEquipoComponent

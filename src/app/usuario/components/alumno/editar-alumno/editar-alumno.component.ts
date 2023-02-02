@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Alumno } from 'src/app/interfaces/alumno';
 import { AlumnoService } from 'src/app/services/alumno.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-editar-alumno',
   templateUrl: './editar-alumno.component.html',
@@ -42,8 +42,18 @@ export class EditarAlumnoComponent implements OnInit {
       respuesta=res;
       //console.log(res);
       if(res.status===0){
+        Swal.fire({
+          icon:'error',
+          title:'Oopss!!!',
+          text: res.respuesta
+        });
         console.log(res.respuesta);
       }else{
+        Swal.fire({
+          icon:'success',
+          title:'Booyahh!!! Accedio el docente',
+          text: res.respuesta
+        });
         console.log(res.respuesta);
       }
     });
