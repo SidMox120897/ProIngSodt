@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Admin } from 'src/app/interfaces/admin';
 import { AdminService } from 'src/app/services/admin.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar',
@@ -47,7 +48,23 @@ export class EditarComponent implements OnInit {
     var respuesta;
     this.adminServi.postAddAdmin(this.admin).subscribe((res)=>{
       respuesta=res;
-      console.log(res);
+      respuesta=res;
+      //console.log(res);
+      if(res.status===0){
+        Swal.fire({
+          icon:'error',
+          title:'Oopss!!!',
+          text: res.respuesta
+        });
+        console.log(res.respuesta);
+      }else{
+        Swal.fire({
+          icon:'success',
+          title:'Booyahh!!! Accedio el docente',
+          text: res.respuesta
+        });
+        console.log(res.respuesta);
+      }
     });
   }
 

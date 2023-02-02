@@ -1,1 +1,28 @@
-<p>search works!</p>
+<div class="container SearchArea">
+    <div class="row pt-5 pb-5">
+        <div *ngFor="let equipo of bodyObject;" class="col-4 mt-3 mb-3">
+            <div class="card">
+                <img src="assets/img/img1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{equipo.nombreEquipo}}</h5>
+                    <p class="card-text">{{equipo.descripcion}}</p>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul>
+                                <li>{{equipo.CodDocente}}</li>
+                                <li>{{equipo.CodAlumnoGuia}}</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            {{equipo.temas}}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

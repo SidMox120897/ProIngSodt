@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Equipo } from 'src/app/interfaces/equipo';
 import { EquipoService } from 'src/app/services/equipo.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-equipo',
@@ -44,7 +45,22 @@ export class EditarEquipoComponent implements OnInit {
     var respuesta;
     this.equipoServi.postAddEquipo(this.equipo).subscribe((res)=>{
       respuesta=res;
-      console.log(res);
+      //console.log(res);
+      if(res.status===0){
+        Swal.fire({
+          icon:'error',
+          title:'Oopss!!!',
+          text: res.respuesta
+        });
+        console.log(res.respuesta);
+      }else{
+        Swal.fire({
+          icon:'success',
+          title:'Booyahh!!! Accedio el docente',
+          text: res.respuesta
+        });
+        console.log(res.respuesta);
+      }
     });
   }
 

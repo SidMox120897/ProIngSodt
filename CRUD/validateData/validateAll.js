@@ -28,7 +28,19 @@ function valCodigo(srt, msjA='', msjB=''){
 }
 
 function valCorreo(srt, msjA='', msjB=''){
-    
+    var mensaje="";
+    let corte_srt=srt.split("@");
+    if(length(corte_srt)==2){
+    if(corte_srt[1]!="unsaac.edu.pe"){
+        mensaje+=msjA+" Correo no valido "+msjB;
+    }
+    else{
+        if((corte_srt[0].length>=5) && (corte_srt[0].length<7 ) && containsLetter(corte_srt[0])){
+            mensaje+=msjA+"El correo del alumno no es valido"+msjB;
+            }
+        }
+    }
+    return mensaje;
 }
 
 function valPhone(srt, msjA='', msjB=''){
@@ -45,7 +57,7 @@ function valPhone(srt, msjA='', msjB=''){
 function valPassword(srt, msjA='', msjB=''){
     var mensaje='';
     if(!isOnlyLetterAndNum(srt)){
-        mensaje+=msjA+' no debe tener letras '+msjB+'\n';
+        mensaje+=msjA+' no debe tener simbolos '+msjB+'\n';
     }
     return mensaje;
 }

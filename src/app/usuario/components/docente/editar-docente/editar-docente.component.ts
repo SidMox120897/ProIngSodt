@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Docente } from 'src/app/interfaces/docente';
 import { DocenteService } from 'src/app/services/docente.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-docente',
@@ -39,15 +40,30 @@ export class EditarDocenteComponent implements OnInit {
       this.docServi.getDocente(this.urlID).subscribe((res)=>{
         this.doc=res[0];
       });
-    this.passwordB='123456789';
+    this.passwordB='';
     }
   }
 
-  add(){
+  add(){    
     var respuesta;
     this.docServi.postAddDocente(this.doc).subscribe((res)=>{
       respuesta=res;
-      console.log(res);
+      //console.log(res);
+      if(res.status===0){
+        Swal.fire({
+          icon:'error',
+          title:'Oopss!!!',
+          text: res.respuesta
+        });
+        console.log(res.respuesta);
+      }else{
+        Swal.fire({
+          icon:'success',
+          title:'Booyahh!!! Agrego el docente',
+          text: res.respuesta
+        });
+        console.log(res.respuesta);
+      }
     });
   }
 

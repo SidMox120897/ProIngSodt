@@ -1,7 +1,7 @@
 <!--http://accesibilidadweb.dlsi.ua.es/?menu=ej-form-test-->
 <!--https://help.cool-tabs.com/hc/es/articles/360007462234-Gu%C3%ADa-de-estilo-estructura-HMTL-de-cuestionarios-quizzes-y-encuestas-->
 <h3><b>DESERCIÓN DE ESTUDIANTES DE UNIVERSIDAD NACIONAL DE SAN ANTONIO ABAD DEL CUSCO</b></h3>
-<form (ngSubmit)="add1()">
+<form id="Cuadro_encuesta">
 <!--<form name="formulario" method="post" action=""> -->
   <div class="pregresp">
       <h3>Responde las siguientes preguntas : </h3>
@@ -166,7 +166,7 @@
     <p></p>
     <!-- Botón de envío de formulario -->
     <div class="row">
-      <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+      <button (click)="add1()" class="btn btn-primary">Enviar respuestas</button>
   </div>
 </div>
 </form>
