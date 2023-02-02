@@ -1,14 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit} from '@angular/core';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-encuesta',
   templateUrl: './encuesta.component.html',
   styleUrls: ['./encuesta.component.css']
 })
 export class EncuestaComponent implements OnInit {
-  constructor() { }
-
+  constructor() { 
+    
+  }
   ngOnInit(): void {
+  }
+  shomodel(){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
   add1(){
     // Obtenemos todos los constantes
@@ -45,8 +55,25 @@ export class EncuestaComponent implements OnInit {
       console.log(valores[i]);
       puntaje+=puntajes[i]*valores[i];
       }
-    // Mostramos un mensaje  
-    alert("Tienes una probabilidad de deserción de : "+puntaje+" %");
+    // Mostramos un mensaje si es que no se han marcado todas las preguntas
+    if(Number.isNaN(puntaje)){
+      Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Existen preguntas no marcadas!',
+      // footer: '<a href="">Why do I have this issue?</a>'
+    })
+    } 
+    else{
+      alert("Tienes una probabilidad de deserción de : "+(puntaje/10)+" %");
+      Swal.fire({
+        title:'Exito!',
+        text:'Se ha enviado con exito las respuestas.',
+        icon:'success',
+        footer: '<a href="">Buscar de grupo de auto ayuda?</a>'
+        }
+      )
+    }
   } 
 }
 
