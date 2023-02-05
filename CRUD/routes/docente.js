@@ -57,7 +57,7 @@ router.post('/delete', async function (req, res, next) {
 
 
 router.get('/search', async function (req, res, next) {
-  GetInfo(scriptAll+' where CodDocente = ?',[req.query.iduser],function(err,data){
+  GetInfo(scriptAll+' where CodDocente = ?',[req.query.CodDocente],function(err,data){
     if(err){
       res.send(err);
     }else{
@@ -66,6 +66,16 @@ router.get('/search', async function (req, res, next) {
   });
 });
 
+router.post('/login', async function (req, res, next) {
+  GetInfo(scriptAll+' where (CodDocente = ? AND password = ?)',[req.query.CodDocente, req.query.password],
+  function(err,data){
+    if(err){
+      res.send({status:0,respuesta:err});
+    }else{
+      res.send({status:1,respuesta:data});
+    }
+  });
+});
 
 router.get('/allin', async function (req, res, next) {
     GetInfo(scriptAll,[],function(err,data){

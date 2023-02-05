@@ -61,9 +61,9 @@ router.post('/delete', async function (req, res, next) {
 router.post('/login', async function (req, res, next) {
   GetInfo(scriptAll+' where (nickname = ? AND password = ?)',[req.query.nickname, req.query.password],function(err,data){
     if(err){
-      res.send(err);
+      res.send({status:0,respuesta:err});
     }else{
-      res.send(data);
+      res.send({status:1,respuesta:data});
     }
   });
 });

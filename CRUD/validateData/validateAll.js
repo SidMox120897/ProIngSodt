@@ -5,6 +5,9 @@ const { containsLetter,
         isOnlyLetterAndNum,
         isType}=require('./validate');
 
+//Valida los nombres y los apellidos de forma general (Docente, Alumno, Admin, Equipo)
+//Los nombres y apellidos no deben tener NRos o simbolos
+
 function valName(srt, msjA='', msjB=''){
     var mensaje='';
     if(containsNum(srt)){
@@ -15,6 +18,9 @@ function valName(srt, msjA='', msjB=''){
     }
     return mensaje;
 }
+
+//Valida los Codigos de forma general (Docente, Alumno, Admin, Equipo,grupo)
+//Los Codigos no deben tener letras o simbolos
 
 function valCodigo(srt, msjA='', msjB=''){
     var mensaje='';
@@ -27,6 +33,9 @@ function valCodigo(srt, msjA='', msjB=''){
     return mensaje;
 }
 
+//Valida los Correos de forma general (Docente, Alumno, Admin)
+//Los Correos deben unsaac.edu.pe
+//Si es alumno los digitos antes del '@' no deben tener letras
 function valCorreo(srt, msjA='', msjB=''){
     var mensaje="";
     let corte_srt=srt.split("@");
@@ -42,7 +51,8 @@ function valCorreo(srt, msjA='', msjB=''){
     }
     return mensaje;
 }
-
+//Valida los Telfonos de forma general (Docente, Alumno)
+//Los Telfonos no deben tener letras o simbolos
 function valPhone(srt, msjA='', msjB=''){
     var mensaje='';
     if(containsLetter(srt)){
@@ -53,7 +63,8 @@ function valPhone(srt, msjA='', msjB=''){
     }
     return mensaje;
 }
-
+//Valida la contraseña de forma general (Docente, Admin)
+//Los contraseñas no deben tener simbolos
 function valPassword(srt, msjA='', msjB=''){
     var mensaje='';
     if(!isOnlyLetterAndNum(srt)){
@@ -61,7 +72,8 @@ function valPassword(srt, msjA='', msjB=''){
     }
     return mensaje;
 }
-
+//Valida los textos (temas, descripcion) de Equipo
+//Los textos deben ser string
 function valTexto(srt, msjA=''){
     var mensaje='';
     if(isType(srt,'string')){

@@ -36,6 +36,7 @@ export class EditarAlumnoComponent implements OnInit {
     }
   }
   
+  //Agregar Alumno
   add(){
     var respuesta;
     this.alumnServi.postAddAlumno(this.Alumno).subscribe((res)=>{

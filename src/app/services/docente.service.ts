@@ -34,4 +34,10 @@ export class DocenteService {
     const url='docente/delete?CodDocente='+Docid;
     return this.API.postTypeRequest(url);
   }
+
+  postLoggerDoc(CodDocente:string,password:string){
+    const url='user/login?CodDocente='+CodDocente+'&password='+password;
+    return this.API.postTypeRequest(url);
+  }
+
 }
