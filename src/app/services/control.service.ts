@@ -14,6 +14,7 @@ export class ControlService {
 
   admin:Admin={} as Admin;
   Doc:Docente={} as Docente;
+  Err:string='';
 
   constructor(
     private docServi:DocenteService,
@@ -21,18 +22,21 @@ export class ControlService {
     ) { }
 
   cargarUser(id:string,password:string){
-    
     this.AdminServi.postLoggerAdmin(id,password).subscribe((res)=>{
       if(res.status===1){
         this.admin=res.respuesta;
+        this.AdminBool=true;
+      }else{
+        this.Err=res.respuesta;
       }
     });
-
     this.docServi.postLoggerDoc(id,password).subscribe((res)=>{
       if(res.status===1){
-        this.admin=res.respuesta;
+        this.Doc=res.respuesta;
+        this.DocBool=true;
+      }else{
+        this.Err=res.respuesta;
       }
     });
-    
   }
 }

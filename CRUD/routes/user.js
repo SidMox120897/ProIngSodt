@@ -63,7 +63,11 @@ router.post('/login', async function (req, res, next) {
     if(err){
       res.send({status:0,respuesta:err});
     }else{
-      res.send({status:1,respuesta:data});
+      if(data.length==1){
+        res.send({status:1,respuesta:data});
+      }else{
+        res.send({status:0,respuesta:'Este Usuario no se encuetra en la BD'});
+      }
     }
   });
 });

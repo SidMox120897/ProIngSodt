@@ -23,8 +23,6 @@
              <div class="titulo"> <h2 >BIENVENIDOS</h2></div><!---centramos-->
               <form (ngSubmit)="logear()">
                 <div class="mb-3 mt-3">
-
-                  
                   <label for="nickname" class="form-label">Apodo:</label>
                   <input type="text"
                         class="form-control"
@@ -33,7 +31,6 @@
                         name="Nickname"
                         [(ngModel)]="id"
                         >
-                  
                 </div>
                 <div class="mb-3">
                   <label for="pwd" class="form-label" >Contraseña:</label>
@@ -48,14 +45,17 @@
                 </div >
 
                 <div class="container"><!--centramos-->
-                <button type="submit" class="btn btn-primary btn-block btn-large"  >Ingresa</button>
-
-              </div>
+                  <button type="submit" class="btn btn-primary btn-block btn-large"  >Ingresa</button>
+                </div>
               </form>
+              <!--
               <div class="pie-form">
                 <a href="#">¿Perdiste tu contraseña?</a>
-                
-            </div>
+              </div>
+              -->
+              <h1>
+                {{userdata}}
+              </h1>
             </div>
           </div>
         </div>
