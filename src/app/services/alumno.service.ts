@@ -14,7 +14,7 @@ export class AlumnoService {
     return this.API.getTypeRequest(url);
   }
 
-  getAlumno(Alumid:string){
+  getAlumno(Alumid:String){
     const url='alumno/search?CodAlumno='+Alumid;
     return this.API.getTypeRequest(url);
   }
@@ -29,7 +29,7 @@ export class AlumnoService {
     return this.API.postTypeRequest(url);
   }
 
-  postDeleteAlumno(Alumid:string){
+  postDeleteAlumno(Alumid:String){
     const url='alumno/delete?CodAlumno='+Alumid;
     return this.API.postTypeRequest(url);
   }

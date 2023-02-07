@@ -13,7 +13,7 @@ const scriptAll='select * from tDocente';
 const scriptInsertar='insert into tDocente(CodDocente,nameDocente,surname,correo,phone,password) values(?,?,?,?,?,?)';
 const scriptDelete='delete from tDocente where CodDocente = ?';
 
-
+//Registra un docente
 router.post('/register', async function (req, res, next) {
   var ArrValues=[
     req.query.CodDocente,

@@ -9,13 +9,13 @@ export class DocenteService {
 
   constructor(private API:ApiService) { }
 
-
+  //Se captura todos los datos del docente
   getallDocente(){
     const url='docente/allin';
     return this.API.getTypeRequest(url);
   }
-
-  getDocente(Docid:string){
+  // se busca un docente pro su codigo
+  getDocente(Docid:String){
     const url='docente/search?CodDocente='+Docid;
     return this.API.getTypeRequest(url);
   }
@@ -30,12 +30,12 @@ export class DocenteService {
     return this.API.postTypeRequest(url);
   }
 
-  postDeleteDocente(Docid:string){
+  postDeleteDocente(Docid:String){
     const url='docente/delete?CodDocente='+Docid;
     return this.API.postTypeRequest(url);
   }
 
-  postLoggerDoc(CodDocente:string,password:string){
+  postLoggerDoc(CodDocente:String,password:String){
     const url='user/login?CodDocente='+CodDocente+'&password='+password;
     return this.API.postTypeRequest(url);
   }
