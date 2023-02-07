@@ -56,12 +56,12 @@ export class EncuestaComponent implements OnInit {
     })
     } 
     else{
-      alert("Tienes una probabilidad de deserción de : "+(puntaje/10)+" %");
+      //alert("Tienes una probabilidad de deserción de : "+(puntaje/10)+" %");
       Swal.fire({
         title:'Exito!',
         text:'Se ha enviado con exito las respuestas.',
         icon:'success',
-        footer: '<a href="">Buscar de grupo de auto ayuda?</a>'
+        footer: '<a href="http://localhost:4200/user">Buscar de grupo de auto ayuda</a>'
         }
       )
     }
