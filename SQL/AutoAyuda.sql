@@ -122,7 +122,14 @@ values
 insert into tEquipo
 (CodEquipo,CodDocente,CodAlumnoGuia,nombreEquipo,temas,descripcion)
 values
-("1","101","184655","Equipo IA","Inteligencia Artificial/Aprendizaje Automatico","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area");
+("1","101","184655","Equipo IA","Inteligencia Artificial/Aprendizaje Automatico","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area"),
+("3","102","184654","Matematicas","Matematica Basica I/Matematica Basica II","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area"),
+("5","103","200332","Equipo Software","Ing. Software/Aprendizaje Automatico","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area"),
+("7","104","192424","Grupo Robotica","Inteligencia Artificial/Robotica","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area"),
+("8","105","194525","Equipo Programacion","Laboratorio I/Laboratorio II","Este grupo quiere mejorar en Inteligencia Artificial te ayudaremos a mejorar en el Area");
+
+
+
 
 insert into tGrupo(CodEquipo,CodAlumno) values("1","204796");
 
