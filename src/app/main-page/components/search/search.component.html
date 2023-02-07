@@ -1,6 +1,6 @@
 <div class="container SearchArea">
     <div class="row pt-5 pb-5">
-        <div *ngFor="let equipo of bodyObject;" class="col-4 mt-3 mb-3">
+        <div *ngFor="let equipo of Equipos;let i = index;" class="col-4 mt-3 mb-3">
             <div class="card">
                 <img src="assets/img/img1.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -11,8 +11,8 @@
                     <div class="row">
                         <div class="col-6">
                             <ul>
-                                <li>{{equipo.CodDocente}}</li>
-                                <li>{{equipo.CodAlumnoGuia}}</li>
+                                <li>{{Alumnos[i].nameAlumno}}</li>
+                                <li>{{Docs[i].nameDocente}}</li>
                             </ul>
                         </div>
                         <div class="col-6">
