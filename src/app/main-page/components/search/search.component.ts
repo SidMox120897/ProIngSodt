@@ -19,33 +19,11 @@ export class SearchComponent implements OnInit {
     private alumnoServi:AlumnoService) { }
 
   Equipos:Equipo[]=[];
-  Alumnos:Alumno[]=[];
-  Docs:Docente[]=[];
+  
 
   ngOnInit(): void {
     this.equipoServi.getallEquipo().subscribe((res)=>{
       this.Equipos=res;
     });
-
-    this.Equipos.forEach(E => {
-      this.docServi.getDocente(E.CodDocente).subscribe((res)=>{
-        if(res.data.length===1){
-          this.Docs.push(res.data);
-          console.log(res.data);
-        }else{
-          this.Docs.push( {} as Docente );
-        }
-      });
-      this.alumnoServi.getAlumno(E.CodAlumnoGuia).subscribe((res)=>{
-        if(res.status===1){
-          this.Alumnos.push(res.respuesta);
-        }else{
-          this.Alumnos.push( {} as Alumno );
-        }
-      });
-    });
-    console.log(this.Alumnos);
-    console.log(this.Docs);
-
   }
 }
