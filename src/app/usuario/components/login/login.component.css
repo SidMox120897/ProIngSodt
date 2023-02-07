@@ -11,6 +11,11 @@
     text-align: center;
     margin-bottom: 20px;
 }
+.letra {
+  font-size: 150%;
+  color:#bbe1fa;
+  margin-bottom: 20px;
+}
 
 /*ojo cuerpiño*/
 body{
