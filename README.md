@@ -14,6 +14,22 @@
 - **QUINTO CATACHURA LADY DIANA** [LADY](https://github.com/Diana-Quinto)
 - **TELLO JUSTINIANI LUIS DAVID** [LUIS](https://github.com/SidMox120897)
 ---
+
+# Herramientas necesarias
+
+Angular
+NodeJs
+XAMPP
+
+# Instalacion de librerias
+
+Se requiere ejecutar el script sql AutoAyuda.sql en la carpeta SQL
+Se requiere instalar las dependencias en el CRUD utilizando el comando (OPCIONAL): npm install
+Para ejecutar el CRUD se necesita utilizar el siguiente comando: npm start
+
+Se Requiere instalar las dependencias de angular en la carpeta principal utilizando: npm install
+Para ejecutar angular se utiliza el siguiente comando: ng serve
+
 # Sistema
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.

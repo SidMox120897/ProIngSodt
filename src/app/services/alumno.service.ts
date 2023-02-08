@@ -33,4 +33,5 @@ export class AlumnoService {
     const url='alumno/delete?CodAlumno='+Alumid;
     return this.API.postTypeRequest(url);
   }
+  
 }
