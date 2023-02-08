@@ -24,11 +24,12 @@ export class EncuestaComponent implements OnInit {
     }
   }
   adBtn(){
-    //
+    // Cuando las anteriores alternativas genera conflicto, deseclecciona
     let valor=<HTMLInputElement>document.getElementById("rpta60");
     if(valor.checked){
       valor.checked = false
     } 
+    return true;
   }
   add1(){
     // Obtenemos todos los constantes
@@ -64,7 +65,6 @@ export class EncuestaComponent implements OnInit {
     for (let i = 0; i < puntajes.length; i++){
       puntaje=puntaje+puntajes[i]*valores[i];
       }
-      console.log(puntaje);
     // Mostramos un mensaje si es que no se han marcado todas las preguntas
     if(Number.isNaN(puntaje)){
       Swal.fire({
@@ -93,7 +93,7 @@ export class EncuestaComponent implements OnInit {
         }).then((result) => {
           /* Read more about isConfirmed, isDenied below */
           if (result.isConfirmed) {
-            window.location.href ="http://localhost:4200/user"
+            window.location.href ="http://localhost:4200/search"
           } else if (result.isDenied) {
             window.location.href ="http://localhost:4200/"
           }

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+.container 
+{
+    display: grid;
+    place-content: center;
+    
+}
+.titulo {
+    font-size: 250%;
+    color:#FFFFFF;;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.letra {
+  font-size: 150%;
+  color:#FFFFFF;;
+  margin-bottom: 20px;
+}
