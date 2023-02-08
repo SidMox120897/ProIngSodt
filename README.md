@@ -23,11 +23,11 @@
 
 # Instalacion de librerias
 
-Se requiere ejecutar el script sql AutoAyuda.sql en la carpeta SQL
-Se requiere instalar las dependencias en el CRUD utilizando el comando (OPCIONAL): npm install
-Para ejecutar el CRUD se necesita utilizar el siguiente comando: npm start
+Se requiere ejecutar el script sql AutoAyuda.sql en la carpeta SQL<br>
+Se requiere instalar las dependencias en el CRUD utilizando el comando (OPCIONAL): npm install<br>
+Para ejecutar el CRUD se necesita utilizar el siguiente comando: npm start<br>
 
-Se Requiere instalar las dependencias de angular en la carpeta principal utilizando: npm install
+Se Requiere instalar las dependencias de angular en la carpeta principal utilizando: npm install<br>
 Para ejecutar angular se utiliza el siguiente comando: ng serve
 
 # Sistema
