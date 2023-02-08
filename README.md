@@ -17,9 +17,9 @@
 
 # Herramientas necesarias
 
-Angular https://angular.io/
-NodeJs https://nodejs.org/en/
-XAMPP https://www.apachefriends.org/es/index.html
+- Angular: https://angular.io/ <br>
+- NodeJs: https://nodejs.org/en/ <br>
+- XAMPP: https://www.apachefriends.org/es/index.html <br>
 
 # Instalacion de librerias
 
