@@ -29,7 +29,6 @@ export class EncuestaComponent implements OnInit {
     if(valor.checked){
       valor.checked = false
     } 
-    return true;
   }
   add1(){
     // Obtenemos todos los constantes
