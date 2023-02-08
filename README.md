@@ -4,9 +4,9 @@
 - **Facultad:** De ingenieria electrica, electronica, informatica y mecanica
 - **Escuela Profesional:** Ingenieria Informatica y de Sistemas
 #### Docente de Teoria:
-- **Ing.**
+- **Ing.** MARIA DEL PILAR VENEGAS VERGARA
 #### Docente de Laboratorio
-- **Ing. **
+- **Ing.** GERAR FRANCIS QUISPE TORRES
 #### Colaboradores:
 - **ANDRADE ESCOBAR LUIS**
 - **CUETO SANCHEZ CARLA PALOMA** [PALOMA](https://github.com/carlasanchez15)
